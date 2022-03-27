@@ -1,0 +1,64 @@
+<body style="text-align: center">
+  <app-top-bar></app-top-bar>
+  <br />
+  <mat-card style="width: 500px; margin: auto">
+    <div mat-dialog-content style="margin: auto">
+      <h1 mat-dialog-title>Ficha de Anamnese</h1>
+      <form [formGroup]="formAnamnese">
+        <mat-form-field style="width: 300px">
+          <mat-label>Nome Paciente</mat-label>
+          <input matInput type="text" formControlName="nome" required />
+        </mat-form-field>
+        <br />
+
+        <h1 mat-dialog-title>Sintomas</h1>
+        <mat-checkbox formControlName="desconfortoPescoco"
+          >Esta sentindo Desconforto no pescoço?</mat-checkbox
+        >
+        <br />
+        <mat-checkbox formControlName="dorBracoEsquerdo"
+          >Esta sentindo Dor no braço esquerdo?</mat-checkbox
+        >
+        <br />
+        <mat-checkbox formControlName="desconfortoBraco"
+          >Esta sentindo Desconforto no braço?</mat-checkbox
+        >
+        <br />
+        <mat-checkbox formControlName="pressaoPeito"
+          >Esta sentindo pressão no peito?</mat-checkbox
+        >
+        <br />
+        <mat-checkbox formControlName="fadiga"
+          >Está se sentindo cansado?</mat-checkbox
+        >
+        <br />
+        <mat-checkbox formControlName="palpitacoes"
+          >Esta sentindo palpitações?</mat-checkbox
+        >
+        <br />
+        <mat-checkbox formControlName="faltaAr"
+          >Esta sentindo falta de ar?</mat-checkbox
+        >
+        <br />
+        <mat-checkbox formControlName="tontura"
+          >Está sentindo tontura?</mat-checkbox
+        >
+        <br />
+        <mat-checkbox formControlName="suorFrio"
+          >Está suando frio?</mat-checkbox
+        >
+      </form>
+    </div>
+    <br />
+    <div mat-dialog-actions style="justify-content: center">
+      <button mat-button cdkFocusInitial (click)="saveForm()">Salvar</button>
+      <button
+        mat-button
+        (click)="voltar()"
+        style="margin-left: 10%; background-color: grey"
+      >
+        Cancelar
+      </button>
+    </div>
+  </mat-card>
+</body>

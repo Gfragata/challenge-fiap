@@ -1,0 +1,31 @@
+/* table {
+  width: 75%;
+  margin-top: 10px;
+  margin-left: 12.5%;
+  overflow:auto; 
+} */
+
+.mat-row:nth-child(1n+1){
+  background-color: #cacaca50;
+}
+.mat-row:not(:nth-child(2n+1)){
+  background-color:#ffffff;
+}
+
+
+table {
+  width: 75%;
+  overflow: auto;
+  margin: auto;
+}
+td {
+  overflow: auto;
+  width:auto;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+tr.mat-footer-row,
+tr.mat-row {
+  height: 20px !important;
+}

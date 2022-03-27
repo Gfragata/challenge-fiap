@@ -1,0 +1,24 @@
+<body style="text-align: center">
+  <mat-card class="formLogin">
+    <div>
+      <h2>Você se sente apto a responder um formulário?</h2>
+      <h4>Caso não esteja apto você ira receber a senha para ser atendido</h4>
+    </div>
+    <div mat-dialog-actions style="margin-left: 33%;">
+      <button
+        mat-button
+        (click)="Entrar()"
+        style="background-color: lightskyblue"
+      >
+        SIM
+      </button>
+      <button
+        mat-button
+        (click)="Cancelar()"
+        style="background: grey; margin-left: 5%"
+      >
+        NÃO
+      </button>
+    </div>
+  </mat-card>
+</body>

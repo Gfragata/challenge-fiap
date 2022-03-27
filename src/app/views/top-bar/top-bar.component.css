@@ -1,0 +1,43 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.toolbar {
+  margin-top: -10px;
+  margin-left: -1.95%;
+  width: 103%;
+  background-color: rgba(25, 118, 210, 0.815);
+}
+
+.example-icon {
+  border: none;
+  background-color: transparent;
+  position: relative;
+  border: none;
+  text-align: center;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.example-icon:after {
+  content: "";
+  background: rgb(25, 118, 210);
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px !important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s;
+}
+
+.example-icon:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s;
+}

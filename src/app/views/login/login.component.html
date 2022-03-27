@@ -1,0 +1,41 @@
+
+<body style="text-align: center;">
+  <mat-card class="formLogin">
+  <div>
+    <h1 style="color: lightskyblue">Hospital Moinho dos ventos</h1>
+  </div>
+  <div>
+    <h1 style="font-style: italic">Login</h1>
+  </div>
+  <form [formGroup]="formLogin">
+    <mat-form-field
+      appearance="fill"
+      style="width: 100%;"
+    >
+      <mat-label>E-mail</mat-label>
+      <input matInput formControlName="username" type="email" required />
+      <mat-error>É necessario informar um e-mail valido</mat-error>
+    </mat-form-field>
+    <mat-form-field
+      appearance="fill"
+      style="width: 100%;"
+    >
+      <mat-label>Senha</mat-label>
+      <input type="password" matInput formControlName="password" required />
+      <mat-error>É necessario informar sua senha</mat-error>
+    </mat-form-field>
+  </form>
+  <div mat-dialog-actions>
+    <button mat-button (click)="GetLogin()" style="background: lightskyblue">
+      Entrar
+    </button>
+    <button
+      mat-button
+      (click)="createAccount()"
+      style="background: lightgray; margin-left: 5%"
+    >
+      Nova Conta
+    </button>
+  </div>
+</mat-card>
+</body>
