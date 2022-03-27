@@ -35,7 +35,6 @@ export class CadastroLoginComponent implements OnInit {
     if (this.formLogin.status != 'INVALID') {
       try {
         if (this.formLogin.value.username.includes('@moinhoventos')) {
-          console.log(this.formLogin.value.username);
           this.router.navigate(['lista']);
         } else {
           this.router.navigate(['emergencia']);

@@ -192,7 +192,7 @@ const ELEMENT_DATA: ClientElement[] = [
 export class HomepageComponent implements OnInit {
   @ViewChild(MatTable) table!: MatTable<ClientElement>;
   displayedColumns: string[] = [
-    'matricula',
+    'convenio',
     'nome',
     'cpf',
     'sexo',
@@ -217,7 +217,6 @@ export class HomepageComponent implements OnInit {
   }
 
   delete(linha: any): void {
-    console.log(linha);
     const dialogRef = this.dialog.open(DeleteModalComponent, {
       width: '500px',
       height: '250px',
@@ -250,7 +249,6 @@ export class HomepageComponent implements OnInit {
           result
         );
       } else {
-        debugger;
         result.id = this.dataSource.length + 1;
         ELEMENT_DATA.push(result);
         this.dataSource = ELEMENT_DATA;

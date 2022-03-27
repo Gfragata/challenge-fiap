@@ -34,7 +34,6 @@ export class LoginComponent implements OnInit {
   async GetLogin() {
     if (this.formLogin.status != 'INVALID') {
       if (this.formLogin.value.username.includes('@moinhoventos')) {
-        console.log(this.formLogin.value.username);
         this.router.navigate(['lista']);
       } else {
         this.router.navigate(['emergencia']);
